@@ -32,7 +32,7 @@ pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
 pip install -r requirements.txt
 ```
 
-On a CPU the notebook runs, but it has not been timed there and is expected to take several hours (the model has 10.8 million parameters and is trained for 4,600 steps). Every random generator is seeded and PyTorch's deterministic algorithms are enabled, so the generated samples are reproducible on the same hardware; exact numbers can differ slightly between CPU and GPU or between GPU models.
+On a CPU the notebook runs, but training is very slow: an independent CPU-only test measured about 7.5 seconds per training step, so the 4,600 steps take roughly 10 hours. Every random generator is seeded and PyTorch's deterministic algorithms are enabled, so the generated samples are reproducible on the same hardware; exact numbers can differ slightly between CPU and GPU or between GPU models.
 
 To regenerate the dependency file from the project environment:
 
